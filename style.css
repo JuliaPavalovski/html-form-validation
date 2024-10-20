@@ -1,0 +1,100 @@
+body {
+    background: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form {
+    max-width: 550px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 0;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    background: white;
+    padding: 0 5px;
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+    outline: none;
+}
+
+.input-container input:focus {
+    border-color: #666;
+}
+
+.input-container input:invalid:not(:focus):not(:placeholder-shown) {
+    background: #ffe6e6; 
+    border-color: red;
+}
+
+.input-container input:valid ~ .valid-icon {
+    background: url('https://cdn-icons-png.flaticon.com/512/845/845646.png') no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 10px;
+    font-size: 0.75rem;
+    color: #333;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #218838;
+}
+
+
+
+

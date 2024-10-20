@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation and Icons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <div class="input-container">
+            <input required type="text" id="first_name" name="first_name" placeholder=" " pattern="^[A-Za-z\s]+$">
+            <label for="first_name">First name</label>
+            <span class="valid-icon"></span>
+        </div>
+        <div class="input-container">
+            <input required type="text" id="last_name" name="last_name" placeholder=" " pattern="^[A-Za-z\s]+$">
+            <label for="last_name">Last name</label>
+            <span class="valid-icon"></span>
+        </div>
+        <div class="input-container">
+            <input required type="email" id="email" name="email" placeholder=" ">
+            <label for="email">Email address</label>
+            <span class="valid-icon"></span>
+        </div>
+        <div class="input-container">
+            <input required type="password" id="password" name="password" placeholder=" " 
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+            <label for="password">Password</label>
+            <span class="valid-icon"></span>
+        </div>
+        <input required type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
+
+
